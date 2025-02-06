@@ -1,0 +1,332 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General Layout */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+h1, h2, h3 {
+    color: #6a4c9c;
+}
+
+section {
+    padding: 20px;
+    margin: 20px 0;
+}
+
+/* Navigation Bar */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f4f4f4;
+    padding: 5px 20px;
+    z-index: 1000;
+}
+
+nav .logo img {
+    width: 150px; /* Adjust logo size as needed */
+    height: auto
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: darkred;
+    text-decoration: none;
+    font-size: 18px;
+    font-family: 'Georgia serif';
+    font-weight: 700;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Carousel Styles */
+.carousel-container {
+    position: relative;
+    width: 100vw; /* Full width of the screen */
+    height: 100vh; /* Full height of the screen */
+    overflow: hidden;
+    margin-top: 70px; /* Adjust to make space for the fixed navbar */
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-item {
+    position: relative;
+    flex: 1;
+    display: none;  /* Hide all images initially */
+}
+
+.carousel-item.active {
+    display: block;  /* Show only the active image */
+}
+
+.carousel-item img {
+    width: 100%;  /* Full width of the container */
+    height: 100%;  /* Full height of the container */
+    object-fit: cover; /* Ensures the image covers the container without distortion */
+}
+
+/* Navigation Arrows */
+a.prev, a.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 10;
+}
+
+a.prev {
+    left: 10px;
+}
+
+a.next {
+    right: 10px;
+}
+
+/* Carousel Captions */
+.carousel-caption {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5); /* Slight transparency for better readability */
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.carousel-caption h2 {
+    margin-bottom: 10px;
+    font-size: 30px;
+}
+
+.carousel-caption p {
+    font-size: 18px;
+}
+/* Base styles for the navbar */
+nav {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+
+nav ul li {
+    position: relative; /* Important for dropdown positioning */
+}
+
+
+
+/* Dropdown Menu */
+nav ul li.dropdown:hover > .dropdown-menu {
+    display: block;
+}
+
+/* Style the dropdown menu (hidden by default) */
+nav ul li .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 180px;
+    padding: 0;
+    border-radius: 4px;
+    z-index: 1;
+}
+
+nav ul li .dropdown-menu li {
+    width: 100%;
+}
+
+nav ul li .dropdown-menu li a {
+    padding: 10px 20px;
+    color: darkred;
+}
+.cards-container {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    flex-wrap: wrap;
+}
+.card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 5px;
+    width: 400px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card-button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.card-button:hover {
+    background-color: #0056b3;
+}
+.partnership-info {
+    text-align: center;
+    padding: 20px;
+    font-size: 18px;
+    color: #333;
+}
+
+.partners-container {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    padding: 20px;
+    margin-left: 310px;
+}
+
+.partner-card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 15px;
+    width: 150px; 
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: block; /* Makes the cards area clickable */
+    text-decoration: none; 
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.partner-card:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+}
+
+.partner-card img {
+    max-width: 100%;
+    height: auto;   
+}
+.view-members {
+    text-align: left; 
+    margin-top: 3px; 
+    margin-left: 320px;
+}
+
+.view-members-button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 10px;
+    text-decoration: none;
+    font-size: 11px;
+    font-weight: 800;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.view-members-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05); /* Slightly enlarge the button on hover */
+}
+
+.view-members-button:focus {
+    outline: none; /* Remove default focus outline */
+}
+.card {
+    max-width: 800px; 
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    padding: 10px;
+}
+
+.card-content {
+    flex: 1;
+    padding: 50px;
+}
+
+.card-content h2 {
+    margin-bottom: 10px;
+    color: #002D62;
+}
+
+.card-content p {
+    color: #333;
+}
+
+.card-image {
+    flex: 1;
+    position: relative;
+    padding: 20px;
+    padding-left: 40px;
+}
+
+.card-image img {
+    width: 120%; 
+    height: auto; 
+    display: block;
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .card {
+        flex-direction: column; 
+    }
+
+    .card-content, .card-image {
+        flex: 1 1 auto; 
+        width: 100%; 
+        padding: 20px; 
+        text-align: center; 
+    }
+
+    .card-image img {
+        width: 100%; 
+        max-width: none;
+    }
+}
+
+

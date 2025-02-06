@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Girls in Motion</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+     <nav>
+         <div class="logo">
+            <img src="Girls in motion_transparent-.png" alt="Girls in Motion Logo">
+        </div>
+        <ul>
+            <li class="dropdown">
+                <a href="#">Home</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Subitem 1</a></li>
+                    <li><a href="#">Subitem 2</a></li>
+                    <li><a href="#">Subitem 3</a></li>
+                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="aboutus.html">About Us</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">History</a></li>
+                                    <li><a href="#">Mission</a></li>
+                                    <li><a href="#">Team</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#">Our Partnership</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Partnership 1</a></li>
+                                    <li><a href="#">Partnership 2</a></li>
+                                    <li><a href="#">Partnership 3</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#">Learning & Resources</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Resource 1</a></li>
+                                    <li><a href="#">Resource 2</a></li>
+                                    <li><a href="#">Resource 3</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#">Stories & Impact</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Story 1</a></li>
+                                    <li><a href="#">Story 2</a></li>
+                                    <li><a href="#">Story 3</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#">Careers</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Job Opening 1</a></li>
+                                    <li><a href="#">Job Opening 2</a></li>
+                                    <li><a href="#">Job Opening 3</a></li>
+                                </ul>
+                            </li>
+                             <li><a href="">Gallery</a></li>
+                        </ul>
+                    </nav>
+                
+                    <!-- Carousel Section (Home) -->
+                    <section id="home" class="carousel-container">
+                        <div id="carousel" class="carousel">
+                            <div class="carousel-item active">
+                                <img src="don-1.jpg" alt="Empowering Girls">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="don-2.jpg" alt="Girls in Action">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="don-3.jpg" alt="Healthy Girls">
+                            </div>
+                        </div>
+                        <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+                        <a class="next" onclick="changeSlide(1)">&#10095;</a>
+                    </section>
+                    
+                    <!-- Cards Section -->
+                    <section class="cards-container">
+                        <div class="card">
+                        <h3>Support Our Foundation</h3>
+                        <p>Learn how you can contribute to empowering girls and making a difference in the community.</p>
+                        <a href="#" class="card-button">Get Involved</a>
+                     </div>
+                    <div class="card">
+                        <h3>Support a Campaign</h3>
+                        <p>Join us in our campaigns aimed at providing resources and opportunities for girls.</p>
+                        <a href="#" class="card-button">Support Now</a>
+                    </div>
+                    <div class="card">
+                        <h3>Join Our Partnership</h3>
+                        <p>Collaborate with us to expand our reach and impact in the community.</p>
+                        <a href="#" class="card-button">Partner With Us</a>
+                    </div>
+                    </section>
+                    <!-- Partnership Text -->
+                    <section class="partnership-info">
+                        <p>Our partnership is made up of more than 1400 organisations in over 100 countries.</p>
+                    </section>
+
+                <!-- Partners Section -->
+             <!-- Partners Section -->
+            <section class="partners-container">
+                <a href="partner1-page.html" class="partner-card">
+                    <img src="partner-logo1.png" alt="Partner 1 Logo">
+                    <p>Partner 1</p>
+                </a>
+                <a href="partner2-page.html" class="partner-card">
+                    <img src="partner-logo2.png" alt="Partner 2 Logo">
+                    <p>Partner 2</p>
+                </a>
+                <a href="partner3-page.html" class="partner-card">
+                     <img src="partner-logo3.png" alt="Partner 3 Logo">
+                     <p>Partner 3</p>
+                </a>
+                <a href="partner4-page.html" class="partner-card">
+                    <img src="partner-logo3.png" alt="Partner 3 Logo">
+                    <p>Partner 4</p>
+                </a>
+                <a href="partner5-page.html" class="partner-card">
+                    <img src="partner-logo3.png" alt="Partner 3 Logo">
+                    <p>Partner 5</p>
+                </a>
+                
+            </section>
+            <section class="view-members">
+                <a href="members-page.html" class="view-members-button">View All Our Members</a>
+            </section>
+            <!-- Overlapping Cards Section -->
+            <div class="card">
+                <div class="card-content">
+                    <h2>Our Business</h2>
+                    <p>Welcome to United Global Business Sle  virtual assiste business objectives.
+                    </p>
+                </div>
+                <div class="card-image">
+                    <img src="Girls in motion_transparent-.png" alt="Image">
+                </div>
+            </div>
+
+                
+                    <!-- JavaScript -->
+                    <script>
+                        let currentIndex = 0;
+                        const slides = document.querySelectorAll('.carousel-item');
+                
+                        function changeSlide(direction) {
+                            // Remove the active class from the current slide
+                            slides[currentIndex].classList.remove('active');
+                            
+                            // Calculate the new index based on the direction
+                            currentIndex = (currentIndex + direction + slides.length) % slides.length; // Ensures the index stays within bounds
+                            
+                            // Add the active class to the new slide
+                            slides[currentIndex].classList.add('active');
+                        }
+                
+                        // Set up automatic slide transition every 3 seconds
+                        setInterval(() => changeSlide(1), 3000);
+                    </script>
+                
+                </body>
+                </html>
+    
+
+   
+
+    <!-- JavaScript -->
+    <script>
+        let currentIndex = 0;
+        const slides = document.querySelectorAll('.carousel-item');
+
+        function changeSlide(direction) {
+            // Remove the active class from the current slide
+            slides[currentIndex].classList.remove('active');
+            
+            // Calculate the new index based on the direction
+            currentIndex = (currentIndex + direction + slides.length) % slides.length; // Ensures the index stays within bounds
+            
+            // Add the active class to the new slide
+            slides[currentIndex].classList.add('active');
+        }
+
+        // Set up automatic slide transition every 3 seconds
+        setInterval(() => changeSlide(1), 3000);
+    </script>
+
+</body>
+</html>

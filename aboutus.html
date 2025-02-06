@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>About Us - Girls in Motion</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo">
+            <img src="Girls in motion_transparent-.png" alt="Girls in Motion Logo">
+        </div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about-us.html" class="active">About Us</a></li>
+            <li><a href="#">Our Partnership</a></li>
+            <li><a href="#">Learning & Resources</a></li>
+            <li><a href="#">Stories & Impact</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Gallery</a></li>
+        </ul>
+    </nav>
+
+    <!-- About Us Section -->
+    <section id="about-us" class="about-us-section">
+        <h1>About Us</h1>
+        <p>At Girls in Motion, we empower girls across the globe to become leaders, break boundaries, and achieve their dreams. We believe that by providing the right resources, mentorship, and opportunities, we can shape a better future for girls everywhere.</p>
+
+        <div class="about-content">
+            <div class="about-history">
+                <h2>Our History</h2>
+                <p>Founded in 2010, Girls in Motion started with the goal of supporting underrepresented girls in various regions around the world. Since then, we've expanded our reach to over 100 countries, building lasting partnerships and creating impactful programs.</p>
+            </div>
+            
+            <div class="about-mission">
+                <h2>Our Mission</h2>
+                <p>Our mission is simple: to empower every girl to believe in herself and reach her fullest potential. Through education, mentorship, and collaboration, we strive to break down the barriers that girls face and create equal opportunities for them to thrive.</p>
+            </div>
+            
+            <div class="about-team">
+                <h2>Meet Our Team</h2>
+                <p>Our team is composed of dedicated professionals, passionate about improving the lives of girls worldwide. From experienced mentors to field experts, our diverse team works together to make the world a better place for girls.</p>
+                <a href="team-page.html" class="team-button">Meet Our Team</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Girls in Motion. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        let currentIndex = 0;
+        const slides = document.querySelectorAll('.carousel-item');
+
+        function changeSlide(direction) {
+            // Remove the active class from the current slide
+            slides[currentIndex].classList.remove('active');
+            
+            // Calculate the new index based on the direction
+            currentIndex = (currentIndex + direction + slides.length) % slides.length; // Ensures the index stays within bounds
+            
+            // Add the active class to the new slide
+            slides[currentIndex].classList.add('active');
+        }
+
+        // Set up automatic slide transition every 3 seconds
+        setInterval(() => changeSlide(1), 3000);
+    </script>
+</body>
+</html>
