@@ -6,35 +6,30 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>About Us - Girls in Motion</title>
     <style>
-        /* Basic reset */
+       
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-
-        /* General Layout */
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
             background-color: #f4f4f4;
             color: #333;
-            padding: 0 30px; /* Added 30px padding on the left and right side */
-            margin: 0 auto;
-            width: 90%; /* Restrict the width to 90% to add space on both sides */
+            padding: 0 30px; 
+            width: 90%; 
         }
 
         h1, h2, h3 {
             color: #6a4c9c;
-            margin-bottom: 20px; /* Increase space below the headers */
+            margin-bottom: 20px; 
         }
 
         section {
-            padding: 40px 30px; /* Add padding to the section (left/right) */
-            margin: 40px 0; /* Increase space between sections */
+            padding: 40px 30px; 
+            margin: 40px 0; 
         }
-
-        /* Navigation Bar */
         nav {
             position: fixed;
             top: 0;
@@ -44,12 +39,12 @@
             justify-content: space-between;
             align-items: center;
             background-color: #f4f4f4;
-            padding: 5px 20px; /* Reduced padding */
+            padding: 5px 20px;
             z-index: 1000;
         }
 
         nav .logo img {
-            width: 200px; /* Adjust logo size as needed */
+            width: 200px; 
             height: auto;
         }
 
@@ -69,47 +64,58 @@
             font-size: 18px;
             font-family: 'Georgia serif';
             font-weight: 700;
-            padding: 5px; /* Add padding around the links */
+            padding: 5px; 
         }
 
         nav ul li a:hover {
             text-decoration: underline;
         }
+        
+nav ul li .dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #f4f4f4;
+    min-width: 200px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
 
-        /* Banner Section */
+
+nav ul li:hover .dropdown-menu {
+    display: block;
+}
+
+
+        
         .banner {
-            /* Rugged Line Between Navbar and Banner */
-
-    width: 100%;
-    height: 500px; /* Adjust the height for the banner */
-    margin-top: 80px; /* Adjust to push it below the fixed navbar */
-    border-top: 10px solid transparent; /* Transparent border to ensure it's not visible */
-    border-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="100%" height="10" viewBox="0 0 100 10"%3E%3Cpath d="M0 4 Q 10 0, 20 4 T 40 4 T 60 4 T 80 4 T 100 4" fill="none" stroke="%236a4c9c" stroke-width="2"%3E%3C/path%3E%3C/svg%3E') 1; /* Using an SVG for the rugged line effect */
-
-
+            width: 100%;
+            height: 500px; 
+            margin-top: 80px; 
+            border-top: 10px solid transparent; 
+            border-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="100%" height="10" viewBox="0 0 100 10"%3E%3Cpath d="M0 4 Q 10 0, 20 4 T 40 4 T 60 4 T 80 4 T 100 4" fill="none" stroke="%236a4c9c" stroke-width="2"%3E%3C/path%3E%3C/svg%3E') 1; /* Using an SVG for the rugged line effect */
         }
 
         .banner img {
             width: 100%;
             height: 100%;
-            object-fit: cover; /* Ensures the image covers the area without distortion */
+            object-fit: cover;
         }
 
         /* About Us Section */
         .about-us-section {
-            padding: 40px 30px; /* Add padding on the left and right side */
+            padding: 40px 30px;
         }
 
-        /* About Us Section Content */
+       
         .about-content {
             margin: 0 auto;
-            max-width: 1000px; /* Max width to ensure content doesn't stretch too wide */
+            max-width: 1000px; 
         }
 
-        /* Adjust individual blocks */
+        
         .about-vision, .about-mission, .about-history, .about-team {
             padding-left: 30px;
-            padding-right: 30px; /* Add padding to each section */
+            padding-right: 30px; 
         }
 
         /* Footer */
@@ -167,20 +173,20 @@
         }
         h1, h2, h3 {
     color: rgb(62, 62, 62);
-    margin-bottom: 20px; /* Increase space below the headers */
-    font-weight: 800; /* Make headings bold */
+    margin-bottom: 20px; 
+    font-weight: 800; 
 }
 
 h1 {
-    font-size: 36px; /* Increase font size for h1 */
+    font-size: 36px; 
 }
 
 h2 {
-    font-size: 30px; /* Increase font size for h2 */
+    font-size: 30px;
 }
 
 h3 {
-    font-size: 24px; /* Increase font size for h3 */
+    font-size: 24px; 
 }
     
     </style>
