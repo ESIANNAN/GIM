@@ -5,41 +5,254 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>About Us - Girls in Motion</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Basic reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* General Layout */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+            padding: 0 30px; /* Added 30px padding on the left and right side */
+            margin: 0 auto;
+            width: 90%; /* Restrict the width to 90% to add space on both sides */
+        }
+
+        h1, h2, h3 {
+            color: #6a4c9c;
+            margin-bottom: 20px; /* Increase space below the headers */
+        }
+
+        section {
+            padding: 40px 30px; /* Add padding to the section (left/right) */
+            margin: 40px 0; /* Increase space between sections */
+        }
+
+        /* Navigation Bar */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #f4f4f4;
+            padding: 5px 20px; /* Reduced padding */
+            z-index: 1000;
+        }
+
+        nav .logo img {
+            width: 200px; /* Adjust logo size as needed */
+            height: auto;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px; /* Increase space between nav items */
+        }
+
+        nav ul li a {
+            color: rgb(21, 49, 132);
+            text-decoration: none;
+            font-size: 18px;
+            font-family: 'Georgia serif';
+            font-weight: 700;
+            padding: 5px; /* Add padding around the links */
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        /* Banner Section */
+        .banner {
+            /* Rugged Line Between Navbar and Banner */
+
+    width: 100%;
+    height: 500px; /* Adjust the height for the banner */
+    margin-top: 80px; /* Adjust to push it below the fixed navbar */
+    border-top: 10px solid transparent; /* Transparent border to ensure it's not visible */
+    border-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="100%" height="10" viewBox="0 0 100 10"%3E%3Cpath d="M0 4 Q 10 0, 20 4 T 40 4 T 60 4 T 80 4 T 100 4" fill="none" stroke="%236a4c9c" stroke-width="2"%3E%3C/path%3E%3C/svg%3E') 1; /* Using an SVG for the rugged line effect */
+
+
+        }
+
+        .banner img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensures the image covers the area without distortion */
+        }
+
+        /* About Us Section */
+        .about-us-section {
+            padding: 40px 30px; /* Add padding on the left and right side */
+        }
+
+        /* About Us Section Content */
+        .about-content {
+            margin: 0 auto;
+            max-width: 1000px; /* Max width to ensure content doesn't stretch too wide */
+        }
+
+        /* Adjust individual blocks */
+        .about-vision, .about-mission, .about-history, .about-team {
+            padding-left: 30px;
+            padding-right: 30px; /* Add padding to each section */
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        footer .footer-links {
+            margin-bottom: 1rem;
+        }
+
+        footer .footer-links ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        footer .footer-links ul li {
+            margin: 0 1rem;
+        }
+
+        footer .footer-links ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+
+        footer .footer-links ul li a:hover {
+            text-decoration: underline;
+        }
+
+        /* Social Media Icons */
+        footer .social-media {
+            margin: 1rem 0;
+        }
+
+        footer .social-media a {
+            color: #fff;
+            margin: 0 1rem;
+            text-decoration: none;
+        }
+
+        footer .social-media a img {
+            width: 30px;
+            height: 30px;
+        }
+
+        footer .social-media a:hover img {
+            opacity: 0.7;
+        }
+        h1, h2, h3 {
+    color: rgb(62, 62, 62);
+    margin-bottom: 20px; /* Increase space below the headers */
+    font-weight: 800; /* Make headings bold */
+}
+
+h1 {
+    font-size: 36px; /* Increase font size for h1 */
+}
+
+h2 {
+    font-size: 30px; /* Increase font size for h2 */
+}
+
+h3 {
+    font-size: 24px; /* Increase font size for h3 */
+}
+    
+    </style>
 </head>
 <body>
-    <!-- Navigation Bar -->
-    <nav>
+     <nav>
         <div class="logo">
-            <img src="Girls in motion_transparent-.png" alt="Girls in Motion Logo">
-        </div>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about-us.html" class="active">About Us</a></li>
-            <li><a href="#">Our Partnership</a></li>
-            <li><a href="#">Learning & Resources</a></li>
-            <li><a href="#">Stories & Impact</a></li>
-            <li><a href="#">Careers</a></li>
-            <li><a href="#">Gallery</a></li>
-        </ul>
-    </nav>
+           <img src="Girls in motion_transparent-.png" alt="Girls in Motion Logo">
+       </div>
+       <ul>
+           <li class="dropdown">
+               <a href="#">Home</a></li>
+                           <li class="dropdown">
+                               <a href="aboutus.html">About Us</a></li>
+                           <li class="dropdown">
+                               <a href="#">Our Partnership</a>
+                               <ul class="dropdown-menu">
+                                   <li><a href="#">National Partnerships & Coalitions</a></li>
+                                   <li><a href="#">Member Directory</a></li>
+                                   <li><a href="#">Become a member</a></li>
+                               </ul>
+                           </li>
+                           <li class="dropdown">
+                               <a href="resources.html">Learning & Resources</a>
+                               <ul class="dropdown-menu">
+                                   <li><a href="#">Learning Articles</a></li>
+                                   <li><a href="career.html">Online Courses</a></li>
+                                   <li><a href="#">Success Stories</a></li>
+                               </ul>
+                           </li>
+                           
+                           <li><a href="career.html">Careers</a></li>
+                            <li><a href="">Gallery</a></li>
+                       </ul>
+   </nav>
 
-    <!-- About Us Section -->
+    
+    <div class="banner">
+        <img src="about-img.jpeg" alt="Girls in Motion Banner"> 
+    </div>
+
+    
     <section id="about-us" class="about-us-section">
-        <h1>About Us</h1>
-        <p>At Girls in Motion, we empower girls across the globe to become leaders, break boundaries, and achieve their dreams. We believe that by providing the right resources, mentorship, and opportunities, we can shape a better future for girls everywhere.</p>
-
         <div class="about-content">
+            <div class="about-vision">
+                <br>
+                <h2>Our Vision</h2>
+                <p>At Girls in Motion, we empower girls across the globe to become leaders, break boundaries, and achieve their dreams. 
+                    We believe that by providing the right resources, mentorship, and opportunities, we can shape a better future for girls everywhere.</p>
+            </div>
+            <br>
+            <br>
+            <div class="about-mission">
+                <h2>Our Mission</h2>
+                <p>Our mission is simple: to empower every girl to believe in herself and reach her fullest potential. We are dedicated to providing the resources and opportunities necessary for girls to thrive. Our goals include:</p>
+                <ul>
+                    <li><strong>Empowering Self-Confidence</strong>: Help girls build the self-esteem and resilience needed to face challenges and embrace leadership roles.</li>
+                    <li><strong>Providing Educational Opportunities</strong>: Ensure access to quality education that opens doors for career growth, personal development, and social change.</li>
+                    <li><strong>Offering Mentorship</strong>: Connect girls with mentors who guide, inspire, and support them as they navigate their journeys to success.</li>
+                    <li><strong>Breaking Down Barriers</strong>: Identify and dismantle the social, cultural, and economic obstacles that prevent girls from reaching their full potential.</li>
+                    <li><strong>Creating Equal Opportunities</strong>: Advocate for gender equality and work toward creating spaces where girls can thrive, regardless of their background or location.</li>
+                </ul>
+                <p>Through education, mentorship, and collaboration, we strive to break down the barriers that girls face and create equal opportunities for them to thrive.</p>
+            </div>
+            <br>
+            <br>
             <div class="about-history">
                 <h2>Our History</h2>
                 <p>Founded in 2010, Girls in Motion started with the goal of supporting underrepresented girls in various regions around the world. Since then, we've expanded our reach to over 100 countries, building lasting partnerships and creating impactful programs.</p>
             </div>
-            
-            <div class="about-mission">
-                <h2>Our Mission</h2>
-                <p>Our mission is simple: to empower every girl to believe in herself and reach her fullest potential. Through education, mentorship, and collaboration, we strive to break down the barriers that girls face and create equal opportunities for them to thrive.</p>
-            </div>
-            
+            <br>
+            <br>
             <div class="about-team">
                 <h2>Meet Our Team</h2>
                 <p>Our team is composed of dedicated professionals, passionate about improving the lives of girls worldwide. From experienced mentors to field experts, our diverse team works together to make the world a better place for girls.</p>
