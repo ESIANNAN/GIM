@@ -332,9 +332,9 @@ nav ul li .dropdown-menu li a {
     }
 }
 footer {
-    background-color: #333;
+    background-color: rgb(229, 155, 167);
     color: #fff;
-    padding: 2rem;
+    padding: 20px;
     text-align: center;
 }
 
@@ -351,7 +351,8 @@ footer .footer-links ul {
 }
 
 footer .footer-links ul li {
-    margin: 0 1rem;
+    display: inline-block;
+    margin: 0 15px;
 }
 
 footer .footer-links ul li a {
