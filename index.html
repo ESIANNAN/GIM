@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Girls in Motion</title>
+    <link rel="icon" type="image/png" href="Girls in motion_transparent-.png">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -129,17 +130,15 @@
                         const slides = document.querySelectorAll('.carousel-item');
                 
                         function changeSlide(direction) {
-                            // Remove the active class from the current slide
-                            slides[currentIndex].classList.remove('active');
                             
-                            // Calculate the new index based on the direction
+                            slides[currentIndex].classList.remove('active');
                             currentIndex = (currentIndex + direction + slides.length) % slides.length; // Ensures the index stays within bounds
                             
-                            // Add the active class to the new slide
+                            
                             slides[currentIndex].classList.add('active');
                         }
                 
-                        // Set up automatic slide transition every 3 seconds
+
                         setInterval(() => changeSlide(1), 3000);
                     </script>
                 
@@ -182,23 +181,21 @@
         const slides = document.querySelectorAll('.carousel-item');
 
         function changeSlide(direction) {
-            // Remove the active class from the current slide
+          
             slides[currentIndex].classList.remove('active');
             
-            // Calculate the new index based on the direction
             currentIndex = (currentIndex + direction + slides.length) % slides.length; // Ensures the index stays within bounds
             
-            // Add the active class to the new slide
+           
             slides[currentIndex].classList.add('active');
         }
 
-        // Set up automatic slide transition every 3 seconds
         setInterval(() => changeSlide(1), 3000);
-        // Get elements
+       
 const hamburger = document.querySelector('.hamburger');
 const navLinks = document.querySelector('.nav-links');
 
-// Toggle 'active' class on hamburger and navLinks
+
 hamburger.addEventListener('click', () => {
     navLinks.classList.toggle('active');
     hamburger.classList.toggle('active');
