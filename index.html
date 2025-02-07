@@ -15,56 +15,30 @@
         </div>
         <ul>
             <li class="dropdown">
-                <a href="#">Home</a>
-                <ul class="dropdown-menu">
-                    <li><a href="#">Subitem 1</a></li>
-                    <li><a href="#">Subitem 2</a></li>
-                    <li><a href="#">Subitem 3</a></li>
-                </ul>
-                            </li>
+                <a href="#">Home</a></li>
                             <li class="dropdown">
-                                <a href="aboutus.html">About Us</a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#">History</a></li>
-                                    <li><a href="#">Mission</a></li>
-                                    <li><a href="#">Team</a></li>
-                                </ul>
-                            </li>
+                                <a href="aboutus.html">About Us</a></li>
                             <li class="dropdown">
                                 <a href="#">Our Partnership</a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="#">Partnership 1</a></li>
-                                    <li><a href="#">Partnership 2</a></li>
-                                    <li><a href="#">Partnership 3</a></li>
+                                    <li><a href="#">National Partnerships & Coalitions</a></li>
+                                    <li><a href="#">Member Directory</a></li>
+                                    <li><a href="#">Become a member</a></li>
                                 </ul>
                             </li>
                             <li class="dropdown">
-                                <a href="#">Learning & Resources</a>
+                                <a href="resources.html">Learning & Resources</a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="#">Resource 1</a></li>
-                                    <li><a href="#">Resource 2</a></li>
-                                    <li><a href="#">Resource 3</a></li>
+                                    <li><a href="#">Learning Articles</a></li>
+                                    <li><a href="career.html">Online Courses</a></li>
+                                    <li><a href="#">Success Stories</a></li>
                                 </ul>
                             </li>
-                            <li class="dropdown">
-                                <a href="#">Stories & Impact</a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#">Story 1</a></li>
-                                    <li><a href="#">Story 2</a></li>
-                                    <li><a href="#">Story 3</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown">
-                                <a href="#">Careers</a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#">Job Opening 1</a></li>
-                                    <li><a href="#">Job Opening 2</a></li>
-                                    <li><a href="#">Job Opening 3</a></li>
-                                </ul>
-                            </li>
+                            
+                            <li><a href="career.html">Careers</a></li>
                              <li><a href="">Gallery</a></li>
                         </ul>
-                    </nav>
+    </nav>
                 
                     <!-- Carousel Section (Home) -->
                     <section id="home" class="carousel-container">
@@ -169,7 +143,34 @@
                 
                 </body>
                 </html>
-    
+                <footer>
+                    <div class="footer-links">
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="aboutus.html">About Us</a></li>
+                            <li><a href="#">Our Partnership</a></li>
+                            <li><a href="#">Learning & Resources</a></li>
+                            <li><a href="#">Stories & Impact</a></li>
+                            <li><a href="career.html">Careers</a></li>
+                            <li><a href="#">Gallery</a></li>
+                        </ul>
+                    </div>
+                    <div class="social-media">
+                        <a href="https://facebook.com" target="_blank">
+                            <img src="facebook-icon.png" alt="Facebook">
+                        </a>
+                        <a href="https://twitter.com" target="_blank">
+                            <img src="twitter-icon.png" alt="Twitter">
+                        </a>
+                        <a href="https://instagram.com" target="_blank">
+                            <img src="instagram-icon.png" alt="Instagram">
+                        </a>
+                        <a href="https://linkedin.com" target="_blank">
+                            <img src="linkedin-icon.png" alt="LinkedIn">
+                        </a>
+                    </div>
+                    <p>&copy; 2025 Girls in Motion. All rights reserved.</p>
+                </footer>
 
    
 
@@ -191,6 +192,16 @@
 
         // Set up automatic slide transition every 3 seconds
         setInterval(() => changeSlide(1), 3000);
+        // Get elements
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
+
+// Toggle 'active' class on hamburger and navLinks
+hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+    hamburger.classList.toggle('active');
+});
+
     </script>
 
 </body>
